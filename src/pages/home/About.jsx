@@ -1,10 +1,27 @@
 
+import { useContext } from 'react';
 import myImage from '../../assets/images/my-image.jpeg';
+import { AuthContext } from '../../AuthProviders/AuthProvider';
+
 const About = () => {
+    // const [allow, setAllow] = useState(false)
+
+    const auth = useContext(AuthContext);
+    const { googleLogin, logOut, user } = auth;
+    console.log(user);
+
+    const handleGoogleLogin = () => {
+        googleLogin();
+        // setAllow(true);
+    }
+    const handleLogOut = () => {
+        logOut();
+        alert('something went wrong');
+    };
     return (
         <div className="bg-black" id='about'>
             <div className="max-w-5xl mx-auto">
-                <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">About Me</h1>
+                <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">{user ? <a href='/dashboard' >About</a> : <button>About</button>} <button onClick={!user ? (() => handleGoogleLogin()) : (() => handleLogOut())}>Me</button> </h1>
                 <hr className="pb-2" />
                 <div className="text-white text-2xl flex flex-col-reverse md:flex-row justify-center items-center gap-8 mt-4 pb-12 mx-auto">
                     <div className='w-full mx-1'>
