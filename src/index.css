@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: inline-flex;
+  animation: scroll 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes beep {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateY(24px);
+  }
+}
+
+.animate-beep {
+  animation: beep 1.2s infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 30% 60%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(90deg, #00a4d6, #4cdc8f, #00a4d6);
+  background-size: 300% 300%;
+  animation: gradientMove 2s linear infinite;
+}
+
+@keyframes gradientSkills {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+.skills-gradient {
+  background: linear-gradient(90deg, #000000, #000000, #00a4d6, #000000);
+  background-size: 300% 300%;
+  animation: gradientSkills 3s ease-out infinite;
+}
