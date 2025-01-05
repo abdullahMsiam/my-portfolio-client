@@ -36,8 +36,8 @@ const About = () => {
                             <li className='font-semibold text-wrap text-lg md:text-2xl'> <span className='text-[#00a4d6]'>Mail:</span>abdullahmuhammadsiam99@gmail.com</li>
                         </ol>
                         <div className='mt-6 flex gap-4 w-11/12'>
-                            <button className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg'>Resume</button>
-                            <button className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg'>My CV</button>
+                            <button className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black'>Resume</button>
+                            <button className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black'>My CV</button>
                         </div>
                     </div>
                     <div className='w-full'>
