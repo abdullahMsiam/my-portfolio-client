@@ -24,7 +24,7 @@ const Projects = () => {
                 <div>
                     <div className="grid grid-cols-1 gap-6 mt-6">
                         {
-                            projects.map((project) => {
+                            projects.slice(0, 3).map((project) => {
                                 return (
                                     <SngProject key={project._id} project={project} />
                                 )

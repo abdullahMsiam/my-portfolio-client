@@ -19,12 +19,12 @@ const About = () => {
         alert('something went wrong');
     };
     return (
-        <div className="bg-black" id='about'>
+        <div className="bg-zinc-900" id='about'>
             <div className="max-w-5xl mx-auto">
                 <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">{user ? <a href='/dashboard' >About</a> : <button>About</button>} <button onClick={!user ? (() => handleGoogleLogin()) : (() => handleLogOut())}>Me</button> </h1>
                 <hr className="pb-2" />
-                <div className="text-white text-2xl flex flex-col-reverse md:flex-row justify-center items-center gap-8 mt-4 pb-12 mx-auto">
-                    <div className='w-full mx-1'>
+                <div className="text-white text-xl md:text-2xl flex flex-col-reverse md:flex-row justify-center items-center gap-8 mt-4 pb-12 mx-auto">
+                    <div className='w-full px-4 md:px-1 md:ms-4'>
                         <ol>
                             <li className='font-semibold'> <span className='text-[#00a4d6]'>Name:</span> Abdullah Muhammad Siam</li>
                             <li className='font-semibold'> <span className='text-[#00a4d6]'>DOB:</span> November, 2001</li>

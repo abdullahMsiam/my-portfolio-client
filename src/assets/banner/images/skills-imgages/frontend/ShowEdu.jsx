@@ -7,8 +7,8 @@ const ShowEdu = ({ qualification }) => {
     const [isDelete, setIsDelete] = useState(false);
     const [isCreate, setIsCreate] = useState(false);
 
-    const { credentialLink, instituteName, major, place, skills, status, title } = qualification;
-    console.log(credentialLink, instituteName, major, place, skills, status, title);
+    const { credentialLink, type, instituteName, major, place, skills, status, title } = qualification;
+    console.log(credentialLink, type, instituteName, major, place, skills, status, title);
 
     const handleUpdate = () => { setIsUpdate(true); }
     const handleDelete = () => { setIsDelete(true); }
@@ -19,12 +19,13 @@ const ShowEdu = ({ qualification }) => {
         const form = e.target;
         const credentialLink = form.credentialLink.value || null;
         const instituteName = form.instituteName.value;
+        const type = form.type.value;
         const major = form.major.value;
         const place = form.place.value;
         const skills = form.skills.value.split(",");
         const status = form.status.value;
 
-        const demandQualification = { credentialLink, instituteName, major, place, skills, status };
+        const demandQualification = { credentialLink, type, instituteName, major, place, skills, status };
 
         console.log(demandQualification);
         // -----------------create qualification-----------------
@@ -101,6 +102,10 @@ const ShowEdu = ({ qualification }) => {
                 <div>
                     <label htmlFor="credentialLink">Credential Link</label>
                     <input type="text" name="credentialLink" id="credentialLink" defaultValue={credentialLink} className="border-2 w-full" />
+                </div>
+                <div>
+                    <label htmlFor="type">Type</label>
+                    <input type="text" name="type" id="type" defaultValue={type} className="border-2 w-full" />
                 </div>
                 <div>
                     <label htmlFor="instituteName">Institute Name</label>
