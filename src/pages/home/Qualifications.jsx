@@ -18,7 +18,7 @@ const Qualifications = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('http://localhost:3000/qualifications');
+            const response = await fetch('https://portfolio-dusky-six-32.vercel.app/qualifications');
             const data = await response.json();
             // setCourses(data);
             const separated = separateByType(data);

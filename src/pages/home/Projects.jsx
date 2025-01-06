@@ -9,7 +9,7 @@ const Projects = () => {
 
     useEffect(() => {
         const getProjects = async () => {
-            const response = await fetch('http://localhost:3000/projects');
+            const response = await fetch('https://portfolio-dusky-six-32.vercel.app/projects');
             const data = await response.json();
             setProjects(data);
         }

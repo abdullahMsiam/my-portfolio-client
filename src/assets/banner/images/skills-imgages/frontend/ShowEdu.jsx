@@ -31,7 +31,7 @@ const ShowEdu = ({ qualification }) => {
         // -----------------create qualification-----------------
         if (isCreate) {
             try {
-                const response = await fetch('http://localhost:3000/qualifications', {
+                const response = await fetch('https://portfolio-dusky-six-32.vercel.app/qualifications', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ const ShowEdu = ({ qualification }) => {
         // -----------------update qualification-----------------
         if (isUpdate) {
             try {
-                const response = await fetch(`http://localhost:3000/qualifications/${qualification._id}`, {
+                const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/qualifications/${qualification._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ const ShowEdu = ({ qualification }) => {
         // -----------------delete qualification-----------------
         if (isDelete) {
             try {
-                const response = await fetch(`http://localhost:3000/qualifications/${qualification._id}`, {
+                const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/qualifications/${qualification._id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

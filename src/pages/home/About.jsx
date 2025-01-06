@@ -2,9 +2,20 @@
 import { useContext } from 'react';
 import myImage from '../../assets/images/my-image.jpeg';
 import { AuthContext } from '../../AuthProviders/AuthProvider';
+import { FaDownload } from 'react-icons/fa';
 
 const About = () => {
     // const [allow, setAllow] = useState(false)
+
+    const handleDownload = () => {
+        const pdfUrl = "../../assets/abdullah_muhammad_siam_resume.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.setAttribute("download", "abdullah_muhammad_siam_resume.pdf"); // Set the filename for download.
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Clean up the DOM.
+    };
 
     const auth = useContext(AuthContext);
     const { googleLogin, logOut, user } = auth;
@@ -35,9 +46,9 @@ const About = () => {
                             <li className='font-semibold'> <span className='text-[#00a4d6]'>Skill:</span> Web Developer</li>
                             <li className='font-semibold text-wrap text-lg md:text-2xl'> <span className='text-[#00a4d6]'>Mail:</span>abdullahmuhammadsiam99@gmail.com</li>
                         </ol>
-                        <div className='mt-6 flex gap-4 w-11/12'>
-                            <button className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black'>Resume</button>
-                            <button className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black'>My CV</button>
+                        <div className='mt-8 flex gap-4 w-11/12'>
+                            <button onClick={() => handleDownload()} className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black flex items-center gap-3'>Resume <FaDownload /></button>
+                            <button className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black flex items-center gap-3'>My CV <FaDownload /></button>
                         </div>
                     </div>
                     <div className='w-full'>

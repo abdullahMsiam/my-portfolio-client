@@ -35,7 +35,7 @@ const SProject = ({ project }) => {
         console.log(demandProject);
 
         if (isUpdate) {
-            const response = await fetch(`http://localhost:3000/projects/${project._id}`, {
+            const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/projects/${project._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ const SProject = ({ project }) => {
 
         //-----------------Create Project-----------------
         if (isCreate) {
-            const response = await fetch(`http://localhost:3000/projects`, {
+            const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/projects`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ const SProject = ({ project }) => {
 
         //-----------------Delete Project-----------------
         if (isDelete) {
-            const response = await fetch(`http://localhost:3000/projects/${project._id}`, {
+            const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/projects/${project._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
