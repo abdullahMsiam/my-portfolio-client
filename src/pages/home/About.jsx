@@ -8,7 +8,7 @@ const About = () => {
     // const [allow, setAllow] = useState(false)
 
     const handleDownload = () => {
-        const pdfUrl = "/src/assets/Abdullah-Muhammad-Siam-React.pdf";
+        const pdfUrl = "https://ams-porfolio.vercel.app/Abdullah-Muhammad-Siam-React.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
         link.setAttribute("download", "abdullah_muhammad_siam_resume.pdf"); // Set the filename for download.
