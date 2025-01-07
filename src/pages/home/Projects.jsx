@@ -17,7 +17,7 @@ const Projects = () => {
     }, [])
 
     return (
-        <div className="bg-zinc-900 text-white" id='projects'>
+        <div className="bg-zinc-900 text-white " id='projects'>
             <div className="max-w-5xl mx-auto">
                 <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">Projects</h1>
                 <hr className="pb-2" />
