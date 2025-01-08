@@ -11,7 +11,6 @@ const Dashboard = () => {
     const navigate = useNavigate();
     const auth = useContext(AuthContext);
     const { user, loading } = auth;
-    console.log(auth)
 
     useEffect(() => {
         if (!user && !loading) {
@@ -35,7 +34,6 @@ const Dashboard = () => {
 
     }, [user, navigate, loading])
 
-    console.log(qualifications);
 
     if (!user) {
         return <ErrorPage />;

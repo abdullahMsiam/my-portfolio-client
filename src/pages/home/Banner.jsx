@@ -8,7 +8,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 const Banner = () => {
     return (
         <div id='top' className="h-screen bg-cover bg-center " style={{ backgroundImage: `url(${banner})` }}>
-            <div className='bg-[#00a4d6] h-screen w-screen bg-opacity-90 flex flex-col justify-center items-center'>
+            <div className='bg-[#00a4d6] h-screen bg-opacity-90 flex flex-col justify-center items-center'>
                 <h1 className='text-white text-4xl md:text-5xl font-bold ms-10'>Hello,  I`m <br /> <span className='text-white text-6xl md:text-7xl'>Abdullah Muhammad Siam</span></h1>
                 <div className="ms-10 mb-7 flex items-center max-w-[280px] md:max-w-[870px] space-x-4 text-5xl font-bold overflow-hidden">
                     <div className=" text-black animate-scroll flex space-x-8">

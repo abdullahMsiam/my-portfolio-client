@@ -5,6 +5,8 @@ import Main from "../layouts/Main";
 import Home from "../pages/home/Home";
 import Dashboard from "../assets/banner/images/skills-imgages/frontend/Dashboard";
 import ErrorPage from "../pages/error/ErrorPage";
+import Blogs from "../pages/blog/Blogs";
+import SingleBlogPage from "../pages/blog/SingleBlogPage";
 
 export const router = createBrowserRouter([
     {
@@ -18,6 +20,14 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/blogs",
+                element: <Blogs />
+            },
+            {
+                path: "/blogs/:id",
+                element: <SingleBlogPage />
             },
             {
                 path: "/dashboard",

@@ -32,7 +32,6 @@ const SProject = ({ project }) => {
         const type = form.type.value;
 
         const demandProject = { imageUrl, title, overview, skills, server, client, siteLink, type };
-        console.log(demandProject);
 
         if (isUpdate) {
             const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/projects/${project._id}`, {

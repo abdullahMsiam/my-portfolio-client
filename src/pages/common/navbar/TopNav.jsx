@@ -19,7 +19,7 @@ const navButton = <>
         <button onClick={() => scrollToSection('education')} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><VscVerifiedFilled /> Qualifications</button>
     </li>
     <li>
-        <button onClick={() => scrollToSection('blogs')} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><FaBloggerB /> Blogs</button>
+        <Link to={"/blogs"} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><FaBloggerB /> Blogs</Link>
     </li>
 </>;
 const scrollToSection = (id, duration = 1000) => {

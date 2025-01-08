@@ -19,7 +19,6 @@ const About = () => {
 
     const auth = useContext(AuthContext);
     const { googleLogin, logOut, user } = auth;
-    console.log(user);
 
     const handleGoogleLogin = () => {
         googleLogin();

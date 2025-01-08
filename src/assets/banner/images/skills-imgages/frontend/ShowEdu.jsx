@@ -8,7 +8,6 @@ const ShowEdu = ({ qualification }) => {
     const [isCreate, setIsCreate] = useState(false);
 
     const { credentialLink, type, instituteName, major, place, skills, status, title } = qualification;
-    console.log(credentialLink, type, instituteName, major, place, skills, status, title);
 
     const handleUpdate = () => { setIsUpdate(true); }
     const handleDelete = () => { setIsDelete(true); }
@@ -27,7 +26,6 @@ const ShowEdu = ({ qualification }) => {
 
         const demandQualification = { credentialLink, type, instituteName, major, place, skills, status };
 
-        console.log(demandQualification);
         // -----------------create qualification-----------------
         if (isCreate) {
             try {

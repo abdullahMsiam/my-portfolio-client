@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 
 const Qualification = ({ course }) => {
     const { credentialLink, instituteName, major, place, skills, status, type } = course;
-    console.log(credentialLink, instituteName, major, place, skills, status, type);
-    console.log(course);
     return (
         <div className="border-2 border-[#00a4d6] rounded-md border-opacity-50 bg-[#040f12] bg-opacity-70 p-2 md:px-3 h-[230px]" >
             <div className="flex justify-between mb-2">

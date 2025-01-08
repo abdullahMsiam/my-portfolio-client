@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footbar = () => {
     return (
-        <div className=" bg-black text-white pt-8 ">
+        <div className=" bg-black text-white pt-8 bottom-0 ">
             <footer className=" max-w-5xl footer flex items-center justify-evenly p-4 mx-auto">
                 <aside className="grid-flow-col items-center">
                     <p>Copyright © {new Date().getFullYear()} - All right reserved by Abdullah Muhammad Siam</p>
