@@ -16,6 +16,14 @@
   animation: scroll 15s linear infinite;
   white-space: nowrap;
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 @keyframes beep {
   0%,

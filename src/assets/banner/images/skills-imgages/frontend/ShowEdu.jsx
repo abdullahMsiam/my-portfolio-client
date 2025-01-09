@@ -43,8 +43,7 @@ const ShowEdu = ({ qualification }) => {
                     alert('Failed to create qualification');
                 }
             } catch (error) {
-                console.log(error);
-                alert('Failed to create qualification');
+                alert(`Failed to create qualification1 ${error.message}`);
             }
         }
 
@@ -65,8 +64,7 @@ const ShowEdu = ({ qualification }) => {
                     alert('Failed to update qualification');
                 }
             } catch (error) {
-                console.log(error);
-                alert('Failed to update qualification');
+                alert(`Failed to update qualification ${error.message}`);
             }
         }
 
@@ -87,8 +85,7 @@ const ShowEdu = ({ qualification }) => {
                     alert('Failed to delete qualification');
                 }
             } catch (error) {
-                console.log(error);
-                alert('Failed to delete qualification');
+                alert(`Failed to delete qualification ${error.message}`);
             }
         }
     }

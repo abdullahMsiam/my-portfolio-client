@@ -10,7 +10,7 @@ const Qualification = ({ course }) => {
         <div className="border-2 border-[#00a4d6] rounded-md border-opacity-50 bg-[#040f12] bg-opacity-70 p-2 md:px-3 h-[230px]" >
             <div className="flex justify-between mb-2">
                 <h1 className="text-[#00a4d6] font-semibold flex items-center gap-1 text-lg"> <MdCategory /> {type}</h1>
-                <Link to={credentialLink} className="text-yellow-300 btn-link flex items-center gap-1" ><FaExternalLinkAlt /> Credential</Link>
+                <Link target="_blank" to={credentialLink} className="text-yellow-300 btn-link flex items-center gap-1" ><FaExternalLinkAlt /> Credential</Link>
             </div>
             <div className="overflow-y-auto overflow-hidden h-[180px]">
                 <div className="">

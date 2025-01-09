@@ -7,6 +7,7 @@ import Dashboard from "../assets/banner/images/skills-imgages/frontend/Dashboard
 import ErrorPage from "../pages/error/ErrorPage";
 import Blogs from "../pages/blog/Blogs";
 import SingleBlogPage from "../pages/blog/SingleBlogPage";
+import ProjectPage from "../pages/projec/ProjectPage";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
             {
                 path: "/blogs",
                 element: <Blogs />
+            },
+            {
+                path: "/projects",
+                element: <ProjectPage />
             },
             {
                 path: "/blogs/:id",

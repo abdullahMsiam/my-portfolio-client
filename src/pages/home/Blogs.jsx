@@ -14,14 +14,14 @@ const Blogs = () => {
     }, [])
 
     return (
-        <div className="bg-zinc-900 text-white pb-6" >
+        <div className="bg-zinc-900 text-white pb-6" id="blogs" >
             <div className="max-w-5xl mx-auto">
                 <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">Blogs</h1>
                 <hr className="pb-2" />
                 <div className="mx-5">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-6">
                         {
-                            blogs.map((blog) => {
+                            blogs.slice(0, 3).map((blog) => {
                                 return <BlogCard key={blog._id} blog={blog} />
                             })
                         }

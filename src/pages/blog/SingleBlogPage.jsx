@@ -21,7 +21,7 @@ const SingleBlogPage = () => {
         <div className="bg-zinc-900 text-white pb-6 pt-24">
             <div className="max-w-5xl mx-auto">
                 <div>
-                    <div className="mx-2">
+                    <div className="w-11/12 mx-auto">
                         <p className="text-gray-300">Date:{date} || {readTime} min read </p>
                         <h1 className="text-4xl font-bold">{title}</h1>
                         <div className="flex items-center gap-2 border-2 border-white border-opacity-20 rounded-md px-2 bg-black w-4/5 mt-1 py-1">
@@ -35,7 +35,7 @@ const SingleBlogPage = () => {
 
                     <img className=" w-11/12  mx-auto h-40 md:h-72 mt-6 rounded-md" src={banner} alt="" />
                     <p style={{ whiteSpace: "pre-line" }} className="text-wrap mt-4 w-11/12 mx-auto">{content}</p>
-                    <div className="flex gap-2 justify-center mt-4 text-lg font-bold">
+                    <div className="flex flex-wrap gap-2 justify-stretch md:justify-center mt-4 text-lg font-bold">
                         <p>Tags:</p>
                         {
                             tags?.map((tag, index) => (

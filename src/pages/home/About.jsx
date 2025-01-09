@@ -1,6 +1,6 @@
 
 import { useContext } from 'react';
-import myImage from '../../assets/images/my-image.jpeg';
+// import myImage from '../../assets/images/my-image.jpeg';
 import { AuthContext } from '../../AuthProviders/AuthProvider';
 import { FaDownload } from 'react-icons/fa';
 
@@ -51,7 +51,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className='w-full'>
-                        <img className=' w-5/6 pb-5 pe-5 border-r-8 border-b-8 border-[#00a4d6] mx-auto border-dashed rounded-2xl' src={myImage} alt="" />
+                        <img className=' w-5/6 pb-5 pe-5 border-r-8 border-b-8 border-[#00a4d6] mx-auto border-dashed rounded-2xl' src="https://i.ibb.co.com/y0CsbbZ/my-img.jpg" alt="" />
                     </div>
                 </div>
             </div>

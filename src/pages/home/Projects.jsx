@@ -24,7 +24,7 @@ const Projects = () => {
                 <div>
                     <div className="grid grid-cols-1 gap-6 mt-6">
                         {
-                            projects.slice(0, 3).map((project) => {
+                            projects.slice(-3).map((project) => {
                                 return (
                                     <SngProject key={project._id} project={project} />
                                 )
@@ -33,7 +33,7 @@ const Projects = () => {
 
                     </div>
                     <div className="mx-auto mt-6 flex justify-center">
-                        <button className="animated-gradient w-1/2 md:w-4/12 btn btn-outline bg-[#00a4d6] text-lg text-black"> <Link>All Projects</Link> </button>
+                        <button className="animated-gradient w-1/2 md:w-4/12 btn btn-outline bg-[#00a4d6] text-lg text-black"> <Link to={"/projects"}>All Projects</Link> </button>
                     </div>
                 </div>
             </div>

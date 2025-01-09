@@ -35,10 +35,6 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-
-
-
-
     const authInfo = {
         auth,
         googleLogin,
