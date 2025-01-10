@@ -116,12 +116,12 @@ const SProject = ({ project }) => {
                     </div>
 
                     <div className="">
-                        <label htmlFor="overview" className="block">Overview:</label>
+                        <label htmlFor="overview">Overview:</label>
                         <textarea
                             id="overview"
                             name="overview"
                             defaultValue={project.overview}
-                            className="border p-2 w-full"
+                            className="border p-2 w-full h-32"
                         ></textarea>
                     </div>
 

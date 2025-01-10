@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { router } from './routes/Routes';
 import AuthProvider from './AuthProviders/AuthProvider';
-document.addEventListener("contextmenu", (event) => event.preventDefault());
+// document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.addEventListener("keydown", (event) => {
   if (
     event.key === "F12" ||
