@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Qualification from "../common/Qualification";
+import Loader from "../common/loader/Loader";
 
 const Qualifications = () => {
-    // const [courses, setCourses] = useState([])
     const [separatedCourses, setSeparatedCourses] = useState({});
+    const [loading, setLoading] = useState(true);
     const separateByType = (data) => {
         return data.reduce((acc, item) => {
             const type = item.type; // Extract the type
@@ -18,18 +19,21 @@ const Qualifications = () => {
 
     useEffect(() => {
         const fetchData = async () => {
+            setLoading(true);
             const response = await fetch('https://portfolio-dusky-six-32.vercel.app/qualifications');
             const data = await response.json();
             // setCourses(data);
             const separated = separateByType(data);
             setSeparatedCourses(separated);
-
+            setLoading(false);
         }
         fetchData();
     }, [])
     return (
         <div className="bg-zinc-900 text-white" id='education'>
-            <div className="max-w-5xl mx-auto">
+            {
+                loading ? <Loader/> : 
+                <div className="max-w-5xl mx-auto">
                 <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">Qualification</h1>
                 <hr className="pb-2" />
 
@@ -44,6 +48,7 @@ const Qualifications = () => {
                     </div>
                 ))}
             </div>
+            }
         </div>
     );
 };
