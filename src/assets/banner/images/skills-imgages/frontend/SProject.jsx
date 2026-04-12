@@ -31,17 +31,18 @@ const SProject = ({ project }) => {
         const siteLink = form.siteLink.value;
         const type = form.type.value;
 
+        alert('Submitting form with values'); 
         const demandProject = { imageUrl, title, overview, skills, server, client, siteLink, type };
 
         if (isUpdate) {
-            const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/projects/${project._id}`, {
+            const response = await fetch(`https://portfolio-dusky-six-32.vercel.app/${project._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(demandProject)
 
-            });
+            });   
             const data = await response.json();
             if (data) {
                 alert('Project Updated Successfully');
@@ -89,10 +90,10 @@ const SProject = ({ project }) => {
 
 
     return (
-        <div className="border p-2 my-2 bg-yellow-200 bg-opacity-50 text-white">
+        <div className="border p-2 my-2 bg-yellow-200 bg-opacity-50">
             {project.title}
             <div>
-                <form onSubmit={handleSubmit} >
+                <form onSubmit={handleSubmit} className="" >
                     <div className="">
                         <label htmlFor="imageUrl" className="">Image URL:</label>
                         <input
