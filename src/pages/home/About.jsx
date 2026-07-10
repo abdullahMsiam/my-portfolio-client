@@ -49,9 +49,11 @@ const About = () => {
                             <button onClick={() => handleDownload()} className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black flex items-center gap-3'>Resume <FaDownload /></button>
                             <button onClick={() => handleDownload()} className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black flex items-center gap-3'>My CV <FaDownload /></button>
                         </div>
+                        
                     </div>
                     <div className='w-full'>
-                        <img className=' w-5/6 pb-5 pe-5 border-r-8 border-b-8 border-[#00a4d6] mx-auto border-dashed rounded-2xl' src="https://i.ibb.co.com/y0CsbbZ/my-img.jpg" alt="" />
+                        {/* <img className=' w-5/6 pb-5 pe-5 border-r-8 border-b-8 border-[#00a4d6] mx-auto border-dashed rounded-2xl' src="https://i.ibb.co.com/y0CsbbZ/my-img.jpg" alt="" /> */}
+                        <img className='w-5/6 rounded-2xl' src="/src/assets/images/abdullah.png" alt="" />
                     </div>
                 </div>
             </div>

@@ -1,33 +1,71 @@
 /* eslint-disable react/prop-types */
 
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { MdCategory } from "react-icons/md";
-import { Link } from "react-router-dom";
 
-const Qualification = ({ course }) => {
-    const { credentialLink, instituteName, major, place, skills, status, type } = course;
+const Qualification = ({ item, index }) => {
+    // const { credentialLink, instituteName, major, place, skills, status, type } = course;
     return (
-        <div className="border-2 border-[#00a4d6] rounded-md border-opacity-50 bg-[#040f12] bg-opacity-70 p-2 md:px-3 h-[230px]" >
-            <div className="flex justify-between mb-2">
-                <h1 className="text-[#00a4d6] font-semibold flex items-center gap-1 text-lg"> <MdCategory /> {type}</h1>
-                <Link target="_blank" to={credentialLink} className="text-yellow-300 btn-link flex items-center gap-1" ><FaExternalLinkAlt /> Credential</Link>
-            </div>
-            <div className="overflow-y-auto overflow-hidden h-[180px]">
-                <div className="">
-                    <h1 className="text-xl font-semibold text-white"> {instituteName}</h1>
-                    <h1 className="text-lg text-white flex gap-1"><p className="text-[#00a4d6]">Title:</p> {major}</h1>
-                    <h1 className="text-lg text-white flex gap-1"><p className="text-[#00a4d6]">Place:</p> {place}</h1>
-                    <h1 className="text-lg text-white flex gap-1"><p className="text-[#00a4d6]">Status:</p> {status}</h1>
+        <div key={index} className="relative pl-8 group">
+            {/* Timeline Node / Circle */}
+            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#030d16] border-2 border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)] z-10" />
 
-                </div>
-                <div className="flex flex-wrap gap-1">
-                    {
-                        skills.map((skill, index) => (
-                            <span key={index} className=" px-3 text-sm mt-2 font-semibold text-black bg-gradient-to-r from-[#00a4d6] to-[#00aeff] rounded-full shadow-lg hover:from-[#479dcf] hover:to-[#00a2ff] focus:ring-2 focus:ring-blue-300 transition-all duration-300">{skill}</span>
-                        ))
-                    }
-                </div>
+            {/* Status and Category Header */}
+            <div className="flex items-center gap-2 text-xs font-medium mb-1.5 tracking-wide">
+                {
+                    item.status == "Running" ? (
+                        <>
+                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                            <span className="text-cyan-400 font-semibold">{item.status}</span>
+                        </>
+                    ) : (
+                        <>
+                            <span className="text-emerald-400 text-[10px]">✓</span>
+                            <span className="text-emerald-400 font-semibold">completed</span>
+                        </>
+                    )
+                }
+                <span className="text-slate-500">—</span>
+                <span className="text-slate-500 font-normal">{item.category}</span>
             </div>
+
+            {/* Qualification Title */}
+            <h3 className="text-white text-lg font-bold tracking-tight mb-1 group-hover:text-cyan-400 transition-colors duration-200">
+                {item.major}
+            </h3>
+            {/* Institute Name and Location */}
+            <div className="flex items-center gap-2 text-sm text-slate-400 mb-1 flex-wrap *:first-letter:capitalize">
+                <span>{item.instituteName}</span>
+                <span>—</span>
+                <span>{item.place}</span>
+            </div>
+            {/* Credential Link */}
+            <div className="flex items-center gap-2 text-sm text-slate-400 mb-1">
+                {item.credentialLink && (
+                    <a
+                        href={item.credentialLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+                    >
+                        <FaExternalLinkAlt className="text-xs" />
+                        View Credential
+                    </a>
+                )}
+            </div>
+
+            {/* Skills */}
+            
+            <p className="text-sm text-slate-400 font-medium *:first-letter:capitalize">
+                {item.skills && item.skills.length > 0 ? (
+                    <div className="flex flex-wrap gap-2">
+                        {item.skills.map((skill, skillIndex) => (
+                            <span key={skillIndex} className="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded">
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                ) : null}
+            </p>
         </div>
     );
 };
