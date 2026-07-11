@@ -56,7 +56,7 @@ const TopNav = () => {
         setIsVisible(preState => !preState);
     }
     return (
-        <div className="navbar text-black bg-[#00a4d6] bg-opacity-80 top-0 fixed z-30" >
+        <div className="navbar text-black bg-[#00a4d6] bg-opacity-80 backdrop-blur-sm top-0 fixed z-30" >
             <div className="md:w-[1024px] md:mx-auto md:flex md:justify-between ">
                 <div>
                     <div className="dropdown">
