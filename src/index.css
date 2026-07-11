@@ -54,10 +54,14 @@
 }
 
 .animated-gradient {
-  background: linear-gradient(90deg, #00a4d6, #4cdc8f, #00a4d6);
+  background: linear-gradient(90deg, #0483a9, #0f172a, #0483a9, #0f172a);
   background-size: 300% 300%;
   animation: gradientMove 2s linear infinite;
+  color: #ffffff;
 }
+
+/* #0f172a */
+/* #00a4d6, #74d8f0, #00a4d6, #74d8f0 */
 
 @keyframes gradientSkills {
   0% {
@@ -68,7 +72,7 @@
   }
 }
 .skills-gradient {
-  background: linear-gradient(90deg, #000000, #000000, #00a4d6, #000000);
+  background: linear-gradient(90deg, #000000,#00485e, #000000,  #00485e);
   background-size: 300% 300%;
-  animation: gradientSkills 3s ease-out infinite;
+  animation: gradientSkills 2s linear infinite;
 }

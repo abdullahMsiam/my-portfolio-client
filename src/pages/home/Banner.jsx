@@ -1,37 +1,71 @@
 
 import { Link } from 'react-router-dom';
-import banner from '../../assets/banner/Designer.jpeg'
+// import banner from '../../assets/banner/Designer.jpeg'
+import banner from '../../assets/images/banner.png';
 import Beeping from '../common/Beeping';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaDownload, FaFolderOpen, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 
 const Banner = () => {
+
+    const handleDownload = () => {
+        const pdfUrl = "https://ams-porfolio.vercel.app/Abdullah-Muhammad-Siam-React.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.setAttribute("download", "abdullah_muhammad_siam_resume.pdf"); // Set the filename for download.
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Clean up the DOM.
+    };
+
     return (
         <div id='top' className="h-screen bg-cover bg-center " style={{ backgroundImage: `url(${banner})` }}>
-            <div className='bg-[#00a4d6] h-screen bg-opacity-90 flex flex-col justify-center items-center'>
-                <h1 className='text-white text-4xl md:text-5xl font-bold ms-10'>Hello,  I`m <br /> <span className='text-white text-6xl md:text-7xl'>Abdullah Muhammad Siam</span></h1>
-                <div className="ms-10 mb-7 flex items-center max-w-[280px] md:max-w-[870px] space-x-4 text-3xl md:text-5xl font-bold overflow-hidden">
-                    <div className=" text-black animate-scroll flex space-x-8">
-                        <span>Web Developer  ||</span>
-                        <span>MERN Developer || </span>
-                        <span>Full Stack Developer</span>
+            <div className='bg-[#00a4d6]/95 h-screen'>
+                <div className="max-w-5xl mx-auto h-full flex flex-col justify-center md:gap-4 ">
+                    <h1 className='ms-2 md:ms-0 my-2  bg-green-200/20 text-black border-2 border-slate-700 rounded-full backdrop-blur-3xl w-fit px-5 py-0.5 inline-flex items-center gap-3 shadow-lg'>
+                        <span className="relative flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-700 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-700"></span>
+                        </span>
+                        <span className='text-sm md:text-lg font-semibold'>
+                            Open to new opportunities
+                        </span>
+                    </h1>
+                    <h1 className='text-white ms-3 text-xl md:text-3xl font-thin mt-3'>Hello,  I`m <br /> <span className='text-white text-3xl md:text-5xl'>Abdullah Muhammad Siam</span></h1>
+                    <div className="mt-4 flex items-center max-w-[280px] md:max-w-[870px] space-x-4 text-3xl md:text-5xl font-bold overflow-hidden
+                    "
+                    style={{ transform: 'translate3d(0, 0, 0)', backfaceVisibility: 'hidden' }}>
+                        <div className=" text-black animate-scroll flex space-x-8 ">
+                            <span>Web Developer  ||</span>
+                            <span>MERN Developer || </span>
+                            <span>Full Stack Developer</span>
+                        </div>
                     </div>
-                </div>
-                {/* <h1 className='text-black font-semibold text-3xl max-w-80 md:max-w-[870px] w-full ms-7 mt-8'>Find Me</h1> */}
-                <div className='max-w-72 md:max-w-[870px] flex justify-evenly md:justify-start md:gap-4 w-full md:ms-7'>
-                    <div>
-                        <Link to={"https://github.com/abdullahMsiam"} target='_blank' className='btn btn-link p-0 text-3xl md:text-2xl text-black'> <FaGithub /> <span className='hidden md:block'>Github</span> </Link>
+                    <div className='mt-6 flex flex-col md:flex-row gap-4 w-11/12 mx-auto md:mx-0'>
+                        <button onClick={() => handleDownload()} className=' animated-gradient btn btn-outline border-none bg-[#00a4d6] text-md md:px-10 text-black hover:shadow-lg hover:shadow-black flex items-center gap-3'>
+                            <FaDownload />Download Resume
+                        </button>
+                        <Link to={"/projects"} className='btn btn-md btn-outline rounded-lg border-none text-md md:px-10 bg-slate-900 text-white hover:shadow-lg hover:shadow-black flex items-center gap-3'>
+                            <FaFolderOpen /> View Projects
+                        </Link>
                     </div>
-                    <div>
-                        <Link to={"https://www.linkedin.com/in/abdullah-muhammad-siam"} target='_blank' className=' btn btn-link p-0 text-3xl md:text-2xl text-black'> <FaLinkedin /> <span className='hidden md:block'>LinkedIn</span> </Link>
-                    </div>
-                    <div>
-                        <Link to={"https://x.com/Abdullah_M_Siam"} target='_blank' className='btn btn-link p-0 text-3xl md:text-2xl text-black'> <FaSquareXTwitter /> <span className='hidden md:block'>X-Twitter</span> </Link>
-                    </div>
+                    {/* <h1 className='text-black font-semibold text-3xl max-w-80 md:max-w-[870px] w-full ms-7 mt-8'>Find Me</h1> */}
+                    <div className='mt-10 max-w-72 md:max-w-[870px] flex justify-evenly md:justify-start md:gap-4 w-full'>
+                        <div>
+                            <Link to={"https://github.com/abdullahMsiam"} target='_blank' className='btn btn-link p-0 text-3xl md:text-2xl text-black hover:text-green-950 hover:-translate-y-1'> <FaGithub /> <span className='hidden md:block'>Github</span> </Link>
+                        </div>
+                        <div>
+                            <Link to={"https://www.linkedin.com/in/abdullah-muhammad-siam"} target='_blank' className=' btn btn-link p-0 text-3xl md:text-2xl text-black hover:text-green-950 hover:-translate-y-1'> <FaLinkedin /> <span className='hidden md:block'>LinkedIn</span> </Link>
+                        </div>
+                        <div>
+                            <Link to={"https://x.com/Abdullah_M_Siam"} target='_blank' className='btn btn-link p-0 text-3xl md:text-2xl text-black hover:text-green-950 hover:-translate-y-1'> <FaSquareXTwitter /> <span className='hidden md:block'>X-Twitter</span> </Link>
+                        </div>
 
-                </div>
-                <div className='absolute bottom-3'>
-                    <Beeping />
+                    </div>
+                    
+                    <div className=' absolute bottom-5 left-0 w-full h-16 '>
+                        <Beeping />
+                    </div>
                 </div>
             </div>
         </div>

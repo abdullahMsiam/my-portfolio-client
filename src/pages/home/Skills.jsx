@@ -29,9 +29,9 @@ import { BsTvFill } from 'react-icons/bs'
 
 const Skills = () => {
     return (
-        <div className="bg-zinc-900 pb-2 text-white" id='skills'>
+        <div className="bg-zinc-900 pb-2 -mb-2 text-white" id='skills'>
             <div className="max-w-5xl mx-auto">
-                <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">My Skills</h1>
+                <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 03· Skills</h1>
                 <hr className="pb-2" />
                 {/* Main content */}
                 <div className="mt-6 mx-5">
@@ -39,7 +39,7 @@ const Skills = () => {
                         {/* skill */}
                         <div className="border-2 border-white border-opacity-25 p-2 py-3 skills-gradient mb-1 rounded-md">
                             <h1 className="text-xl font-bold flex items-center gap-2 mb-3"><FaDatabase className='text-green-300' /> Backend Development</h1>
-                            <div className='flex flex-wrap gap-1 justify-evenly'>
+                            <div className='flex flex-wrap gap-1 justify-evenly md:justify-normal'>
                                 <ShowBtn img={nodeJs} title='NodeJs' />
                                 <ShowBtn img={typescript} title={'Typescript'} />
                                 <ShowBtn img={javaScript} title={'ExpressJS'} />
@@ -54,7 +54,7 @@ const Skills = () => {
                         {/* skill */}
                         <div className="border-2 border-white border-opacity-25 p-2 py-3 skills-gradient mb-1 rounded-md">
                             <h1 className="text-xl font-bold flex items-center gap-2 mb-3"><BsTvFill className='text-red-400' />Frontend Development</h1>
-                            <div className='flex flex-wrap gap-1 justify-evenly'>
+                            <div className='flex flex-wrap gap-1 justify-evenly md:justify-normal'>
                                 <ShowBtn img={react} title='ReactJs' />
                                 <ShowBtn img={nextJs} title='NextJs' />
                                 <ShowBtn img={redux} title={'Redux'} />
@@ -77,7 +77,7 @@ const Skills = () => {
                         {/* skill */}
                         <div className="border-2 border-white border-opacity-25 p-2 py-3 skills-gradient mb-1 rounded-md">
                             <h1 className="text-xl font-bold flex items-center gap-2 mb-3"><FaTools className='text-yellow-400' />Tools and Tech</h1>
-                            <div className='flex flex-wrap gap-1 justify-evenly'>
+                            <div className='flex flex-wrap gap-1 justify-evenly md:justify-normal'>
                                 <ShowBtn img={github} title='Github' />
                                 <ShowBtn img={vercel} title='Vercel' />
                                 <ShowBtn img={figma} title='Figma' />

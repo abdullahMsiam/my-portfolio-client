@@ -41,17 +41,17 @@ export default function Qualifications() {
             {
                 loading ? <Loader /> :
                     <div className=" max-w-5xl mx-auto ">
-                        <h1 className=" pt-16 pb-2 ps-1 font-semibold text-3xl text-[#00a4d6]">— 04. Qualification</h1>
+                        <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 05· Qualification</h1>
                         <hr className="pb-2" />
-                        <h1 className="mt-3 text-2xl font-semibold mb-1 text-cyan-500">Academic Qualifications</h1>
-                        <div className="max-w-2xl w-full relative border-l border-cyan-500/40 ml-4 space-y-10 ">
+                        <h1 className="mt-2 text-xl md:text-2xl font-semibold mb-1 ms-1 text-cyan-500">Academic Qualifications</h1>
+                        <div className="max-w-2xl w-11/12 mx-auto relative border-l border-cyan-500/40 ml-4 space-y-10 ">
                             {Academic?.map((item, index) => (
                                 <Qualification className="my-2" key={index} item={item} index={index} />
                             ))}
                         </div>
 
-                        <h1 className="mt-10 text-2xl font-semibold mb-1 text-cyan-500">Coursework</h1>
-                        <div className="max-w-2xl w-full relative border-l border-cyan-500/40 ml-4 space-y-10">
+                        <h1 className="mt-10 ms-1 text-xl md:text-2xl font-semibold mb-1 text-cyan-500">Coursework</h1>
+                        <div className="max-w-2xl w-11/12 mx-auto relative border-l border-cyan-500/40 ml-4 space-y-10">
                             {Course?.map((item, index) => (
                                 <Qualification className="mb-2" key={index} item={item} index={index} />
                             ))}

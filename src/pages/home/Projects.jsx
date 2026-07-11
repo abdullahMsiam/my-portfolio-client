@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SngProject from "../common/SngProject";
 import { Link } from "react-router-dom";
 import Loader from "../common/loader/Loader";
+import { FaFolderOpen } from "react-icons/fa6";
 
 
 
@@ -21,12 +22,12 @@ const Projects = () => {
     }, [])
 
     return (
-        <div className="bg-zinc-900 text-white " id='projects'>
+        <div className="bg-zinc-900 text-white -mb-2" id='projects'>
 
             {
                 loading ? <Loader /> :
                     <div className="max-w-5xl mx-auto">
-                        <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">Projects</h1>
+                <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 04· Projects</h1>
                         <hr className="pb-2" />
                         <div>
                             <div className="grid grid-cols-1 gap-6 mt-6">
@@ -40,7 +41,8 @@ const Projects = () => {
 
                             </div>
                             <div className="mx-auto mt-6 flex justify-center">
-                                <button className="animated-gradient w-1/2 md:w-4/12 btn btn-outline bg-[#00a4d6] text-lg text-black"> <Link to={"/projects"}>All Projects</Link> </button>
+                                <button className="animated-gradient w-5/6 md:w-4/12 btn btn-sm md:btn-md btn-outline text-md md:text-lg border-cyan-600 hover:shadow hover:shadow-black"> <Link className="flex items-center gap-2" to={"/projects"}>
+                                <FaFolderOpen/> All Projects</Link> </button>
                             </div>
                         </div>
                     </div>

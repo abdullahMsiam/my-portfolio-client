@@ -29,32 +29,85 @@ const About = () => {
         logOut();
         alert('something went wrong');
     };
+
+
+
+    const profileInfo = [
+        { label: 'NICKNAME', value: 'Abdullah' },
+        { label: 'NATIONALITY', value: 'Bangladeshi' },
+        { label: 'AVAILABLE', value: 'Remote/On-Site' },
+        { label: 'LANGUAGES', value: 'English, Bangla' },
+        { label: 'FOCUS', value: 'Web Development' },
+        { label: 'EMAIL', value: 'abdullah.siam.chat@gmail.com' },
+    ];
+
     return (
-        <div className="bg-zinc-900" id='about'>
+        <div className="bg-zinc-900 -mb-2" id='about'>
             <div className="max-w-5xl mx-auto">
-                <h1 className="text-center pt-16 font-bold text-4xl text-[#00a4d6]">{user ? <a href='/dashboard' >About</a> : <button>About</button>} <button onClick={!user ? (() => handleGoogleLogin()) : (() => handleLogOut())}>Me</button> </h1>
+                <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">{user ? <a href='/dashboard' >— 02· About</a> : <button>— 02· About</button>} <button onClick={!user ? (() => handleGoogleLogin()) : (() => handleLogOut())}>Me</button> </h1>
                 <hr className="pb-2" />
-                <div className="text-white text-xl md:text-2xl flex flex-col-reverse md:flex-row justify-center items-center gap-8 mt-4 pb-12 mx-auto">
-                    <div className='w-full px-4 md:px-1 md:ms-4'>
-                        <ol>
-                            <li className='font-semibold'> <span className='text-[#00a4d6]'>Nick Name:</span> Abdullah</li>
-                            <li className='font-semibold'> <span className='text-[#00a4d6]'>DOB:</span> November, 2001</li>
-                            <li className='font-semibold'> <span className='text-[#00a4d6]'>Nationality:</span> Bangladeshi</li>
-                            <li className='font-semibold'> <span className='text-[#00a4d6]'>Available:</span> Remote</li>
-                            <li className='font-semibold'> <span className='text-[#00a4d6]'>Language:</span> English, Bangla</li>
-                            <li className='font-semibold'> <span className='text-[#00a4d6]'>Contact:</span> +8801637-271447</li>
-                            <li className='font-semibold'> <span className='text-[#00a4d6]'>Skill:</span> Web Developer</li>
-                            <li className='font-semibold text-wrap text-lg md:text-2xl'> <span className='text-[#00a4d6]'>Mail:</span>chat.abdullah.ms@gmail.com</li>
-                        </ol>
-                        <div className='mt-8 flex gap-4 w-11/12'>
-                            <button onClick={() => handleDownload()} className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black flex items-center gap-3'>Resume <FaDownload /></button>
-                            <button onClick={() => handleDownload()} className=' animated-gradient w-1/2 btn btn-outline bg-[#00a4d6] text-lg text-black flex items-center gap-3'>My CV <FaDownload /></button>
+                <div className="text-white text-xl md:text-2xl flex flex-col-reverse md:flex-row justify-center
+                 gap-8 mt-4 pb-12 mx-auto
+                max-w-5xl w-full lg:gap-12 items-start
+                ">
+                    <div className='flex-1 w-full px-4 md:px-1 md:ms-4'>
+                        <div className="">
+                            {/* Bio Paragraph */}
+                            <p className="text-slate-400 text-base md:text-lg leading-relaxed font-normal max-w-3xl text-justify">
+                                B.Sc. Engineering student and full-stack developer focused on the MERN stack.
+                                I like building complete systems — from database schema to responsive UI —
+                                and I`m currently deepening my backend skills with TypeScript and PostgreSQL.
+                            </p>
+
+                            {/* Info Details Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 pt-2">
+                                {profileInfo.map((info, index) => (
+                                    <div
+                                        key={index}
+                                        className="border-b border-slate-800/70 pb-3 flex flex-col justify-end min-h-[60px]"
+                                    >
+                                        <span className="text-[10px] font-bold tracking-widest text-slate-500 uppercase mb-1.5">
+                                            {info.label}
+                                        </span>
+                                        <span className="text-white text-sm sm:text-base font-medium tracking-wide">
+                                            {info.label === 'EMAIL' ? (
+                                                <a
+                                                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${info.value}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="hover:text-cyan-400 transition-colors duration-200 break-all"
+                                                >
+                                                    {info.value}
+                                                </a>
+                                            ) : (
+                                                info.value
+                                            )}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        
+                        <div className='mt-2 flex gap-4'>
+                            <button onClick={() => handleDownload()} className=' animated-gradient w-full btn btn-sm md:btn-md btn-outline border-cyan-600 bg-[#00a4d6] text-md md:text-lg flex items-center gap-3
+                            hover:shadow hover:shadow-black'> <FaDownload /> Resume</button>
+                        </div>
+
                     </div>
-                    <div className='w-full'>
-                        {/* <img className=' w-5/6 pb-5 pe-5 border-r-8 border-b-8 border-[#00a4d6] mx-auto border-dashed rounded-2xl' src="https://i.ibb.co.com/y0CsbbZ/my-img.jpg" alt="" /> */}
-                        <img className='w-5/6 rounded-2xl' src={myImage} alt="Abdullah" />
+                    <div className="w-full md:max-w-80">
+                        <div className="w-full aspect-square rounded-2xl border border-slate-800 bg-[#051422] flex items-center justify-center p-4 relative overflow-hidden group hover:border-slate-700 transition-colors duration-300">
+                            {/* Replace the src path below with your actual image file */}
+                            <img
+                                src={myImage}
+                                alt="Profile"
+                                className="w-full h-full object-cover rounded-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                                onError={(e) => {
+                                    // Hides the broken icon fallback gracefully if image fails to load
+                                    e.target.style.display = 'none';
+                                }}
+                            />
+                            {/* Subtle background glow effect */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent pointer-events-none" />
+                        </div>
                     </div>
                 </div>
             </div>

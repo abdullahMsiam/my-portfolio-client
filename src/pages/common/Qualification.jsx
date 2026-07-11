@@ -5,7 +5,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 const Qualification = ({ item, index }) => {
     // const { credentialLink, instituteName, major, place, skills, status, type } = course;
     return (
-        <div key={index} className="relative pl-8 group">
+        <div key={index} className="relative p-4 group">
             {/* Timeline Node / Circle */}
             <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#030d16] border-2 border-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)] z-10" />
 
