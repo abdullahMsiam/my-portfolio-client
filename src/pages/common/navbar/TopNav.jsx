@@ -7,19 +7,22 @@ import { Link } from "react-router-dom";
 
 const navButton = <>
     <li>
-        <button onClick={() => scrollToSection('about')} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><BsPersonWorkspace /> About Me</button>
+        <button onClick={() => scrollToSection('about')} className="btn btn-sm bg-[#00a4d6]/90  border-none hover:bg-opacity-0 rounded-none text-black"><BsPersonWorkspace /> About Me</button>
     </li>
     <li>
-        <button onClick={() => scrollToSection('skills')} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"> <VscCode className="text-xl" /> Skills</button>
+        <button onClick={() => scrollToSection('skills')} className="btn btn-sm bg-[#00a4d6]/90 md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"> <VscCode className="text-xl" /> Skills</button>
     </li>
     <li>
-        <button onClick={() => scrollToSection('projects')} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black "> <FaDiagramProject /> Projects</button>
+        <button onClick={() => scrollToSection('projects')} className="btn btn-sm bg-[#00a4d6]/90 md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black "> <FaDiagramProject /> Projects</button>
     </li>
     <li>
-        <button onClick={() => scrollToSection('education')} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><VscVerifiedFilled /> Qualifications</button>
+        <button onClick={() => scrollToSection('education')} className="btn btn-sm bg-[#00a4d6]/90 md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><VscVerifiedFilled /> Qualifications</button>
     </li>
     <li>
-        <Link to={"/blogs"} className="btn btn-sm bg-[#00a4d6] md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><FaBloggerB /> Blogs</Link>
+        <button onClick={() => scrollToSection('blogs')} className="btn btn-sm bg-[#00a4d6]/90 md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"><FaBloggerB /> Blogs</button>
+    </li>
+    <li>
+        <button onClick={() => scrollToSection('contact')} className="btn btn-sm bg-[#00a4d6]/90 md:bg-opacity-0 border-none hover:bg-opacity-0 rounded-none text-black"> <BsPersonWorkspace/> Connect</button>
     </li>
 </>;
 const scrollToSection = (id, duration = 1000) => {
@@ -76,13 +79,13 @@ const TopNav = () => {
                         </button>
                         <ul onClick={() => toggleButton()}
                             tabIndex={0}
-                            className={`menu text-black menu-sm dropdown-content bg-black bg-opacity-30 rounded-box z-[1] mt-3 w-48 p-2 shadow ${isVisible ? 'hidden' : 'none'} rounded-none `}>
+                            className={`menu text-black menu-sm dropdown-content bg-black bg-opacity-30 rounded-box z-[1] mt-3 w-48 p-0 shadow ${isVisible ? 'hidden' : 'none'} rounded-none `}>
                             {
                                 navButton
                             }
                         </ul>
                     </div>
-                    <Link onClick={() => scrollToSection('top')} className="btn btn-ghost text-2xl rounded-none " to={"/"}>ABDULLAH M.S.</Link>
+                    <Link onClick={() => scrollToSection('top')} className="btn btn-ghost text-xl font-semibold rounded-none " to={"/"}>ams.dev</Link>
                     {/* <a className="btn btn-ghost text-xl">ABDULLAH M.S.</a> */}
                 </div>
                 <div className=" hidden  lg:flex">

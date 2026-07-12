@@ -3,7 +3,7 @@ import { useContext } from 'react';
 // import myImage from '../../assets/images/my-image.jpeg';
 import { AuthContext } from '../../AuthProviders/AuthProvider';
 import { FaDownload } from 'react-icons/fa';
-import myImage from '../../assets/images/abdullah.png';
+import myImage from '../../assets/images/abdullah2.png';
 
 const About = () => {
     // const [allow, setAllow] = useState(false)
@@ -94,12 +94,12 @@ const About = () => {
 
                     </div>
                     <div className="w-full md:max-w-80">
-                        <div className="w-full aspect-square rounded-2xl border border-slate-800 bg-[#051422] flex items-center justify-center p-4 relative overflow-hidden group hover:border-slate-700 transition-colors duration-300">
+                        <div className="w-5/6 mx-auto md:w-full aspect-square rounded-2xl border border-slate-800 bg-[#051422] flex items-center justify-center p-2 relative overflow-hidden group hover:border-slate-700 transition-colors duration-300">
                             {/* Replace the src path below with your actual image file */}
                             <img
                                 src={myImage}
                                 alt="Profile"
-                                className="w-full h-full object-cover rounded-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                                className=" w-full h-full object-cover rounded-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                                 onError={(e) => {
                                     // Hides the broken icon fallback gracefully if image fails to load
                                     e.target.style.display = 'none';

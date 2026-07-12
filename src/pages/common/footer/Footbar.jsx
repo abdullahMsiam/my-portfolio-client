@@ -1,6 +1,6 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+// import { FaGithub, FaLinkedin } from "react-icons/fa";
+// import { FaSquareXTwitter } from "react-icons/fa6";
+// import { Link } from "react-router-dom";
 
 const Footbar = () => {
     return (
@@ -9,7 +9,7 @@ const Footbar = () => {
                 <aside className="grid-flow-col items-center">
                     <p>Copyright © {new Date().getFullYear()} - All right reserved by Abdullah Muhammad Siam</p>
                 </aside>
-                <nav className="grid-flow-col gap-4 flex justify-center">
+                {/* <nav className="grid-flow-col gap-4 flex justify-center">
                     <div>
                         <Link to={"https://github.com/abdullahMsiam"} target='_blank' className='btn btn-link p-0 text-2xl text-white'> <FaGithub />  </Link>
                     </div>
@@ -19,7 +19,7 @@ const Footbar = () => {
                     <div>
                         <Link to={"https://x.com/Abdullah_M_Siam"} target='_blank' className='btn btn-link p-0 text-2xl text-white'> <FaSquareXTwitter /> </Link>
                     </div>
-                </nav>
+                </nav> */}
             </footer>
         </div>
     );
