@@ -16,7 +16,7 @@ export default function Contact() {
 
     return (
         <section className="bg-zinc-900 text-white " id="contact">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-2">
                 {/* HEADER SECTION */}
                 <div className=" mb-12 space-y-3">
                     <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 07· Connect</h1>

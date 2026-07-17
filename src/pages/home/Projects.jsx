@@ -27,8 +27,10 @@ const Projects = () => {
             {
                 loading ? <Loader /> :
                     <div className="max-w-5xl mx-auto">
-                <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 04· Projects</h1>
-                        <hr className="pb-2" />
+                        <div className="px-4 md:px-0">
+                            <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 04· Projects</h1>
+                            <hr className="pb-2" />
+                        </div>
                         <div>
                             <div className="grid grid-cols-1 gap-6 mt-6">
                                 {
@@ -42,7 +44,7 @@ const Projects = () => {
                             </div>
                             <div className="mx-auto mt-6 flex justify-center">
                                 <button className="animated-gradient w-5/6 md:w-4/12 btn btn-sm md:btn-md btn-outline text-md md:text-lg border-cyan-600 hover:shadow hover:shadow-black"> <Link className="flex items-center gap-2" to={"/projects"}>
-                                <FaFolderOpen/> All Projects</Link> </button>
+                                    <FaFolderOpen /> All Projects</Link> </button>
                             </div>
                         </div>
                     </div>

@@ -31,8 +31,10 @@ const Skills = () => {
     return (
         <div className="bg-zinc-900 pb-2 -mb-2 text-white" id='skills'>
             <div className="max-w-5xl mx-auto">
-                <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 03· Skills</h1>
-                <hr className="pb-2" />
+                <div className="px-4 md:px-0">
+                    <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 03· Skills</h1>
+                    <hr className="pb-2" />
+                </div>
                 {/* Main content */}
                 <div className="mt-6 mx-5">
                     <div className='grid md:grid-cols-2 gap-3'>

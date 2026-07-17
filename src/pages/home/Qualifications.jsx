@@ -40,9 +40,11 @@ export default function Qualifications() {
 
             {
                 loading ? <Loader /> :
-                    <div className=" max-w-5xl mx-auto ">
-                        <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 05· Qualification</h1>
-                        <hr className="pb-2" />
+                    <div className=" max-w-5xl mx-auto -mb-2">
+                        <div className="px-4 md:px-0">
+                            <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 05· Qualifications</h1>
+                            <hr className="pb-2" />
+                        </div>
                         <h1 className="mt-2 text-xl md:text-2xl font-semibold mb-1 ms-1 text-cyan-500">Academic Qualifications</h1>
                         <div className="max-w-2xl w-11/12 mx-auto relative border-l border-cyan-500/40 ml-4 space-y-10 ">
                             {Academic?.map((item, index) => (

@@ -1,7 +1,7 @@
 
-import { useContext } from 'react';
+// import { useContext } from 'react';
 // import myImage from '../../assets/images/my-image.jpeg';
-import { AuthContext } from '../../AuthProviders/AuthProvider';
+// import { AuthContext } from '../../AuthProviders/AuthProvider';
 import { FaDownload } from 'react-icons/fa';
 import myImage from '../../assets/images/abdullah2.png';
 
@@ -18,17 +18,17 @@ const About = () => {
         document.body.removeChild(link); // Clean up the DOM.
     };
 
-    const auth = useContext(AuthContext);
-    const { googleLogin, logOut, user } = auth;
+    // const auth = useContext(AuthContext);
+    // const { googleLogin, logOut, user } = auth;
 
-    const handleGoogleLogin = () => {
-        googleLogin();
-        // setAllow(true);
-    }
-    const handleLogOut = () => {
-        logOut();
-        alert('something went wrong');
-    };
+    // const handleGoogleLogin = () => {
+    //     googleLogin();
+    //     // setAllow(true);
+    // }
+    // const handleLogOut = () => {
+    //     logOut();
+    //     alert('something went wrong');
+    // };
 
 
 
@@ -44,8 +44,11 @@ const About = () => {
     return (
         <div className="bg-zinc-900 -mb-2" id='about'>
             <div className="max-w-5xl mx-auto">
-                <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">{user ? <a href='/dashboard' >— 02· About</a> : <button>— 02· About</button>} <button onClick={!user ? (() => handleGoogleLogin()) : (() => handleLogOut())}>Me</button> </h1>
-                <hr className="pb-2" />
+                {/* <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">{user ? <a href='/dashboard' >— 02· About</a> : <button>— 02· About</button>} <button onClick={!user ? (() => handleGoogleLogin()) : (() => handleLogOut())}>Me</button> </h1> */}
+                <div className="max-w-5xl mx-auto px-4 md:px-0">
+                    <h1 className="font-serif pt-16 pb-2 ps-1 text-lg md:text-2xl text-[#00a4d6]">— 02· About</h1>
+                    <hr className="pb-2" />
+                </div>
                 <div className="text-white text-xl md:text-2xl flex flex-col-reverse md:flex-row justify-center
                  gap-8 mt-4 pb-12 mx-auto
                 max-w-5xl w-full lg:gap-12 items-start
