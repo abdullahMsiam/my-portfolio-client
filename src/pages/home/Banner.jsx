@@ -9,7 +9,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 const Banner = () => {
 
     const handleDownload = () => {
-        const pdfUrl = "https://ams-porfolio.vercel.app/Abdullah-Muhammad-Siam-React.pdf";
+        const pdfUrl = "https://ams-porfolio.vercel.app/AbdullahMSiam_resume_FullStack_Developer.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
         link.setAttribute("download", "abdullah_muhammad_siam_resume.pdf"); // Set the filename for download.
